@@ -15,6 +15,7 @@ public class Teste {
 		a2.setNomeCitacao("MELO, R.");
 		a2.setUniversidade("PUC-Rio");
 		
+		Autor a3 = new Autor(3, "Jorge", "GOMES, J.", "UFF", true);
 		
 		a1.publicar(1, "Java Use a Cabeça 1", 2005, "Livro");
 		a1.publicar(2, "Java Use a Cabeça 2", 2005, "Livro");
@@ -29,6 +30,8 @@ public class Teste {
 		a1.getPublicacoes().get(2).imprimirBibliografia();
 		
 		a1.listarPublicacoes();
+		
+		System.out.println(a3.getUniversidade());
 	}//Fim main
 
 }//Fim Teste

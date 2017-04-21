@@ -1,13 +1,23 @@
 import java.util.ArrayList;
 
 public class Autor {
+	
 	private int codAutor;
 	private String nomeAutor;
 	private String nomeCitacao;
 	private String universidade;
-	private boolean ehPremidado;
+	private boolean ehPremiado;
 	private ArrayList<Publicacao> publicacoes = new ArrayList<Publicacao>();
 	
+	//Construtores 
+	public Autor(){};
+	public Autor (int codAut, String nomeAut, String nomeCit, String univer, boolean premio){
+		codAutor = codAut;
+		nomeAutor = nomeAut;
+		nomeCitacao = nomeCit;
+		universidade = univer;
+		ehPremiado = premio;
+	};
 	//Método Publicar
 	
 	public void publicar(int codPubl, String titulo, int ano, String tipo ){
@@ -45,10 +55,10 @@ public class Autor {
 	
 	//Método Premiar Autor 
 	public void premiarAutor(){
-		if(this.ehPremidado){
+		if(this.ehPremiado){
 			System.out.println("Já é premiado, não pode ser novamente!");
 		} else{
-			this.setEhPremidado(true);
+			this.setEhPremiado(true);
 			System.out.println("Autor premiado!");
 			//ou nesse caso pode : this.ehPremiado = true;
 		}
@@ -84,11 +94,11 @@ public class Autor {
 	public void setUniversidade(String universidade) {
 		this.universidade = universidade;
 	}
-	public boolean isEhPremidado() {
-		return ehPremidado;
+	public boolean isEhPremiado() {
+		return ehPremiado;
 	}
-	public void setEhPremidado(boolean ehPremidado) {
-		this.ehPremidado = ehPremidado;
+	public void setEhPremiado(boolean ehPremidado) {
+		this.ehPremiado = ehPremiado;
 	}
 	public ArrayList<Publicacao> getPublicacoes() {
 		return publicacoes;

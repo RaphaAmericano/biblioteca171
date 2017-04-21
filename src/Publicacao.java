@@ -5,6 +5,15 @@ public class Publicacao {
 	private String tipo;
 	private Autor autor;
 	
+	//Construtores
+	public Publicacao(){};
+	public Publicacao(int codPub, String tituloPub, int anoPub, Autor autorPub){
+		codPublicacao = codPub;
+		titulo = tituloPub;
+		ano = anoPub;
+		autor = autorPub;
+	};
+	
 	//Metodo de Imprimir
 	public void imprimirBibliografia(){
 	
